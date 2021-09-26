@@ -15,7 +15,7 @@ public class Principal {
         byte opcion = 0;
         // Modificar el valor según sea la modificación futura.
         while (opcion != 3) {
-            opcion = vista.seleccion_menu_inicial(Byte.parseByte("3"));
+            opcion = vista.seleccion(Byte.parseByte("3"));
             // Agregar mas opciones segun se considere
             switch (opcion) {
                 case 1:

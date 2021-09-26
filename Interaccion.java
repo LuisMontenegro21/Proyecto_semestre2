@@ -72,7 +72,7 @@ public class Interaccion {
      * 
      * @return seleccion: byte
      */
-    public byte seleccion_menu_inicial(byte valor) {
+    public byte seleccion(byte valor) {
         byte seleccion = 0;
         boolean pasar = false;
         do {
