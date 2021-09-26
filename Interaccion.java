@@ -72,16 +72,22 @@ public class Interaccion {
      * 
      * @return seleccion: byte
      */
-    public byte seleccion_menu_inicial() {
+    public byte seleccion_menu_inicial(byte valor) {
         byte seleccion = 0;
         boolean pasar = false;
         do {
+            // Modificar los numeros de comparacion, segun las opciones de los metodos
+            if (valor == 3) {
+                menu_inicio();
+            } else if (valor == 5) {
+                menu_opciones();
+            }
             // cambiar este metodo al que corresponde con las opciones que se presentaran.
             // cantidad_memoria();
             try {
                 seleccion = Byte.parseByte(JOptionPane.showInputDialog("Ingrese la cantidad de memoria que desea"));
                 // Modificar el valor el cual se verifica que este en rango (1-5)
-                if ((seleccion < 1) || (seleccion > 5)) {
+                if ((seleccion < 1) || (seleccion > valor)) {
                     System.out.println(fuera_de_rango());
                 } else {
                     pasar = true;
